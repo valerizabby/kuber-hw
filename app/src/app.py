@@ -1,22 +1,22 @@
 # app.py
 
 from flask import Flask
-from datetime import datetime
+import requests
 
 app = Flask(__name__)
 
 time_get_counter = 0
 
 
-def return_current_time():
-    return datetime.now().strftime("%H:%M:%S")
-
-
 @app.route("/time", methods=['GET'])
 def time():
     global time_get_counter
     time_get_counter += 1
-    return return_current_time()
+    response = requests.get('http://worldtimeapi.org/api/timezone/Europe/Moscow')
+    if response.status_code == 200:
+        return response.json()['datetime']
+    else:
+        return "response from server is not ok"
 
 
 @app.route("/statistics", methods=['GET'])
