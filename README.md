@@ -23,7 +23,7 @@
     curl http://<url-name>/statistics  
     ```
 4. ✨ Наконец, чтобы посмотреть содержимое data.txt выполним:
-   - Получаем название пода <data-pod-name>
+   - Получаем название пода  `<data-pod-name>`
    ```bash
    kubectl get pods 
    ```
