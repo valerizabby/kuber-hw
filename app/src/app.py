@@ -1,11 +1,15 @@
-# main.py
+# app.py
 
 from flask import Flask
-from utils.time import return_current_time
+from datetime import datetime
 
 app = Flask(__name__)
 
 time_get_counter = 0
+
+
+def return_current_time():
+    return datetime.now().strftime("%H:%M:%S")
 
 
 @app.route("/time", methods=['GET'])
