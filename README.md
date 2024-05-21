@@ -7,7 +7,7 @@
     ```
 2. ✨ Запускаем скрипт
     ```bash
-    sh start_script.sh
+    ./start_script.sh
     ```
 3. ✨ В другом окне терминала запускаем 
     ```bash
