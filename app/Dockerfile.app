@@ -1,10 +1,10 @@
-FROM ubuntu:latest
+FROM python:3.9
 
-RUN apt-get update -y
-RUN apt-get install -y python3-pip python3-dev build-essential python3-flask python3-requests
-COPY ./src /app
+RUN pip install flask requests
+
 WORKDIR /app
-# RUN pip3 install flask
+COPY ./src/app.py /app
+
 EXPOSE 5001
-ENTRYPOINT ["python3"]
-CMD ["app.py"]
+
+CMD ["python", "app.py"]
