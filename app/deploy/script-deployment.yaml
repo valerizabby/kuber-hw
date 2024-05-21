@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: script
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: script
+  template:
+    metadata:
+      labels:
+        app: script
+    spec:
+      containers:
+      - name: script-deployment
+        image: murick/time_request
+        ports:
+          #- containerPort: 8001
