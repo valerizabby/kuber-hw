@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: script-deployment
-        image: murick/time_request
+        image: valerizab/time_request
         ports:
           #- containerPort: 8001
