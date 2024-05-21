@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: app-deployment
-        image: valerizab/app:v0.1
+        image: valerizab/app
         ports:
         - containerPort: 5001
           protocol: TCP
