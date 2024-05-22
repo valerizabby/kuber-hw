@@ -6,7 +6,7 @@ spec:
   hosts:
   - "worldtimeapi.org"
   ports:
-  - number: 10000
+  - number: 80
     name: http
     protocol: HTTP
   resolution: DNS

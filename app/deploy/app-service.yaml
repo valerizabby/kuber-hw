@@ -6,7 +6,7 @@ spec:
   selector:
     app: app-deployment
   ports:
-    - port: 10000
+    - port: 80
       protocol: TCP
       targetPort: 5001
   type: LoadBalancer

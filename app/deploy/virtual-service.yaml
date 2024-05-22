@@ -15,7 +15,7 @@ spec:
     - destination:
         host: app-service
         port:
-          number: 10000
+          number: 80
   - match:
     - uri:
         exact: /statistics
@@ -23,4 +23,4 @@ spec:
     - destination:
         host: app-service
         port:
-          number: 10000
+          number: 80
